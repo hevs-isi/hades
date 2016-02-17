@@ -1,11 +1,9 @@
 # Dependencies
-highlighter:	rouge
-
-redcarpet:
-	extensions: ["smart", "tables"]
+markdown:        kramdown
+highlighter:    rouge
 
 kramdown:
-	input: GFM
+    input: GFM
 
 # Permalinks
 relative_permalinks: false
@@ -16,20 +14,20 @@ collections:
 - doc
 
 collections:
-	doc:
-		output: true
-		permalink: doc/:path/
+    doc:
+        output: true
+        permalink: doc/:path/
 
 # Setup
-title:			Hades
-tagline:		'Hades cluster'
-description:	'Documentation for the hades cluster'
-url:			https://hevs-isi.github.io/hades/
-baseurl:		/hades
+title:            Hades
+tagline:        'Hades cluster'
+description:    'Documentation for the hades cluster'
+url:            https://hevs-isi.github.io/hades/
+baseurl:        /hades
 
 author:
-	name:		'Marc Pignat'
-	url:		http://www.hevs.ch/isi
+    name:        'Marc Pignat'
+    url:        http://www.hevs.ch/isi
 
 # Custom vars
 
