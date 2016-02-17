@@ -1,0 +1,41 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+redcarpet:
+  extensions: ["smart", "tables"]
+
+kramdown:
+  input: GFM
+
+# Permalinks
+relative_permalinks: false
+permalink: news/:title/
+
+# Collections
+collections:
+- doc
+
+collections:
+  doc:
+    output: true
+    permalink: doc/:path/
+
+# Setup
+title:            Hades
+tagline:          'Hades cluster'
+description:      'Documentation for the hades cluster'
+url:              https://hevs-isi.github.io/hades/
+baseurl:          /hades
+
+author:
+  name:           'Marc Pignat'
+  url:            http://www.hevs.ch/isi
+
+# Custom vars
+
+# Latest libGDX version
+# The download link is '{{ site.github.repo }}archive/v{{ site.github.latestversion }}.zip'
+github:
+  latestversion: 1.1.1
+  repo:          https://github.com/hevs-isi/hades/
