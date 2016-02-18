@@ -8,17 +8,18 @@ title: Ssh access to VMs
 VMs resides on their own private IP network, but can be accessed through `ssh`
 using `hades.hevs.ch` as a gateway.
 
-Unfortunately this method does not work with `putty`, but works using cygwin's ssh
-or openssh (the standard ssh client in most GNU/Linux distributions).
+:exclamation: The `putty` ssh client is not supported. This method works
+using cygwin's ssh or openssh (the standard ssh client in most GNU/Linux distributions).
 
 ## How to
 
-1. Send your public ssh key to the [staff](../staff/).
+1. Send your public ssh key to the [staff](../../staff/).
 	* The file usually resides in ~/.ssh/id_rsa.pub
 	* If it does not exist, it can be generated using `ssh-keygen -t rsa`
 2. Once your key has been added on the server, you can connect to your VM using
 the following command: `ssh -o "ProxyCommand ssh sshfwd@hades.hevs.ch -W %h:%p" cluster@VM_IP_ADDRESS`
 	* :bulb: `VM_IP_ADDRESS` can be found on the web interface : > Compute > Instance , in the "IP Address" column
+3. Add your ssh public key to the VM `~/.ssh/authorized_keys`, so the VM won't ask the password anymore.
 
 ### TIP: Do it simpler
 Do you want to use a simpler command, like `ssh-hades cluster@VM_IP_ADDRESS`?

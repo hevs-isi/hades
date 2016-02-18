@@ -15,7 +15,38 @@ sudo apt-get install cifs-utils
 {% endhighlight %}
 
 # List of drives
-A list of available drives is [here](https://sinf.hevs.ch/fr-fr/Ressources/R%C3%A9seau/Lecteurs-r%C3%A9seau)
+The sinf provides a list of [available drives](https://sinf.hevs.ch/fr-fr/Ressources/R%C3%A9seau/Lecteurs-r%C3%A9seau).
+
+Another way to obtain this this list is by using the `ǹet use` command on a windows machine with the drives already connected.
+
+### Example
+On my windows machine:
+
+```
+C:\Users\uadmin>net use
+New connections will be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+             I:        \\VLEDATA\HEI             NetWare Services
+             K:        \\VLEDATA\ADM             NetWare Services
+             P:        \\VLEDATA\PCB             NetWare Services
+             R:        \\VLEDATA\SHARE\PUBLIC    NetWare Services
+             T:        \\VLEDATA\TOOLS           NetWare Services
+             U:        \\VLHDATA\HOME\STAFF\MARC.PIGNAT
+                                                NetWare Services
+             V:        \\VLEDATA\HDL             NetWare Services
+             Y:        \\LXECAD\DATA\COLL        NetWare Services
+The command completed successfully.
+
+
+C:\Users\uadmin>
+```
+So the `I:` drive is on the server `VLEDATA` in the share `HEI`.
+It's complete URL is therefore : `smb://VLEDATA/HEI`
+
 
 # Mounting from the GUI
 1. Open the file manager (`thunar`)
@@ -25,17 +56,18 @@ A list of available drives is [here](https://sinf.hevs.ch/fr-fr/Ressources/R%C3%
 	* Domain : WORKGROUP (or anything else not empty).
 	* Password : Your AAI password.
 
-![Detail of a real board featuring a QR code generated using qr2gerber](../../images/doc/thunar_network_drive.png)
-
+![thunar credentials](../../images/doc/thunar_network_drive.png)
 
 # Mounting from command line
-Example : Mounting `i:\` in `./toto`
+Example : Mounting `I:\` in `./toto`
 
 	mkdir -p toto
-	mount -t cifs -o username=username_goes_here //datahei.hevs.ch/hei toto
+	sudo mount -t cifs -o username=username_goes_here //datahei.hevs.ch/hei toto
+
+:exclamation: Don't include `smb:` in the server path
 
 # Permanent mount
-Example : mount `i:\` in `/mnt/i`
+Example : mount `I:\` in `/mnt/i`
 
 1. Create the mount destination
 ```
@@ -46,3 +78,5 @@ mkdir /mnt/i
 ```
 	//datahei.hevs.ch/hei  /mnt/i  cifs  username=username_goes_here,password=*****,iocharset=utf8  0  0
 ```
+:exclamation: Don't include `smb:` in the server path
+

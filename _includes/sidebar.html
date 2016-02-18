@@ -6,7 +6,6 @@
     </div>
     <nav class="sidebar-nav">
 
-      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}/index.html">Home</a>
       <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}/news/">News</a>
 
       <span>Documentation</span>
@@ -21,6 +20,7 @@
       </ul>
 
       <a class="sidebar-nav-item" href="{{ site.github.repo }}/issues">Issues</a>
+      <a class="sidebar-nav-item" href={{ site.baseurl }}/staff/>Staff</a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}- pim[at]hevs.ch</p>
