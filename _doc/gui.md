@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: doc/gui/
-weight: 1
+weight: 11
 title: GUI access to the VMs
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: doc/staff/
-weight: 1
+weight: 98
 title: Staff
 ---
 
