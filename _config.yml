@@ -5,6 +5,8 @@ highlighter:    rouge
 kramdown:
     input: GFM
 
+gems:
+    - jemoji
 # Permalinks
 relative_permalinks: false
 permalink: news/:title/
