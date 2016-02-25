@@ -27,3 +27,4 @@ Do you want to use a simpler command, like `ssh-hades cluster@VM_IP_ADDRESS`?
 
 Simply add this line to `~/.profile` : `alias ssh-hades="ssh -o \"ProxyCommand ssh sshfwd@hades.hevs.ch -W %h:%p\""` into your `~/.profile` file and
 use the command.
+
