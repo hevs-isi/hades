@@ -12,7 +12,7 @@ Accessing the cluster and virtual machines on it requires some tools and configu
 * Generate your ssh public key
 	* run `PuttyGen` (a shortcut should be in the start menu)
 		* Click generate and move the mouse as requested
-		* Save the private key.
+		* Save the private key as in your `home/hades/sshfwd.ppk` (example : `c:\users\uadmin\hades\sshfwd.ppk`).
 		* Copy the public key from the top text field and email it to hades at hevs dot ch
 		:Exclamation: Please don't use the "Save public key", it saves the key in another format.
 
