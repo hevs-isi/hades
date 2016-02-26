@@ -80,6 +80,6 @@ Root: HKCR; Subkey: "hadesvnc\shell\open\command"; ValueType: "string"; ValueDat
 
 Root: HKCR; Subkey: "hadesssh"; ValueType: "string"; ValueData: "hadesssh Protocol"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "hadesssh"; ValueType: "string"; ValueName: "URL Protocol"; ValueData: ""
-Root: HKCR; Subkey: "hadesssh\DefaultIcon"; ValueType: "string"; ValueData: "{app}\vncviewer.exe,0"
+Root: HKCR; Subkey: "hadesssh\DefaultIcon"; ValueType: "string"; ValueData: "{app}\putty.exe,0"
 Root: HKCR; Subkey: "hadesssh\shell\open\command"; ValueType: "string"; ValueData: """wscript.exe"" ""//NoLogo"" ""{app}\hades_url_handler.vbs"" ""%1"""
 
