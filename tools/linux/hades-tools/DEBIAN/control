@@ -1,0 +1,9 @@
+Package: hades-tools
+Version: 2016-02-26.0-1
+Section: base
+Priority: optional
+Architecture: all
+Depends: vinagre, ssh-client
+Maintainer: Marc Pignat <marc.pignat@hevs.ch>
+Description: Hades.hevs.ch integration
+ Handle hadesssh:// and hadesvnc:// URLs.
