@@ -16,4 +16,13 @@ Accessing the cluster and virtual machines on it requires some tools and configu
 		* Copy the public key from the top text field and email it to hades at hevs dot ch
 		:Exclamation: Please don't use the "Save public key", it saves the key in another format.
 
+## For linux
+* Install the [tools](http://hades.hevs.ch/hades-tools-2016-02-26.deb).
+* Generate your ssh public key (only if you don't have one)
+	* `file ~/.ssh/id_rsa.pub`
+		* If the file exists, skip the creation.
+	* ssh-keygen -t rsa
+		* save the key as `~/.ssh/id_rsa`
+	* email `~/.ssh/id_rsa.pub` to hades at hevs dot ch
+
 Now you can click on hadesssh:// and hadesvnc:// links :smile:
