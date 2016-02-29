@@ -17,7 +17,7 @@ Accessing the cluster and virtual machines on it requires some tools and configu
 		:Exclamation: Please don't use the "Save public key", it saves the key in another format.
 
 ## For linux
-* Install the [tools](http://hades.hevs.ch/hades-tools-2016-02-26.deb).
+* Install the [tools](http://hades.hevs.ch/hades-tools-2016-02-29.deb).
 * Generate your ssh public key (only if you don't have one)
 	* `file ~/.ssh/id_rsa.pub`
 		* If the file exists, skip the creation.
