@@ -61,6 +61,7 @@ DestDir: {app}; Source: input\hades_url_handler.vbs;
 DestDir: {app}; Source: input\pageant.exe;
 DestDir: {app}; Source: input\plink.exe;
 DestDir: {app}; Source: input\putty.exe;
+DestDir: {app}; Source: input\kitty.ini;
 DestDir: {app}; Source: input\puttygen.exe;
 DestDir: {app}; Source: input\vncviewer.exe;
 
