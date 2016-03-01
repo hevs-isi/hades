@@ -8,7 +8,7 @@ title: Tools
 Accessing the cluster and virtual machines on it requires some tools and configuration.
 
 ## For windows.
-* Install the [tools](http://hades.hevs.ch/hades-tools-windows-2016-02-26.exe).
+* Install the [tools](http://hades.hevs.ch/hades-tools-windows-2016-03-01.exe).
 * Generate your ssh public key
 	* run `PuttyGen` (a shortcut should be in the start menu)
 		* Click generate and move the mouse as requested
