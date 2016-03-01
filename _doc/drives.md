@@ -8,15 +8,13 @@ title: Network drives
 HEI network drives are available from the VMs, and here is how to mount them.
 
 # Required software
-The required software is already installed in recent images (starting with 2015.02), for older images, the `cifs-utils` package
-must be installed.
+The required software is already installed in recent images (starting with 2015.02), for older images, the `cifs-utils` package must be installed.
 {% highlight shell %}
 sudo apt-get install cifs-utils
 {% endhighlight %}
 
 # List of drives
 The sinf provides a list of [available drives](https://sinf.hevs.ch/fr-fr/Ressources/R%C3%A9seau/Lecteurs-r%C3%A9seau).
-
 Another way to obtain this this list is by using the `ǹet use` command on a windows machine with the drives already connected.
 
 ### Example
@@ -44,8 +42,7 @@ The command completed successfully.
 
 C:\Users\uadmin>
 ```
-So the `I:` drive is on the server `VLEDATA` in the share `HEI`.
-It's complete URL is therefore : `smb://VLEDATA/HEI`
+So the `I:` drive is on the server `VLEDATA` in the share `HEI`, It's complete URL is therefore : `smb://VLEDATA/HEI`
 
 
 # Mounting from the GUI

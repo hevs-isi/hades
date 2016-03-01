@@ -7,10 +7,10 @@ title: Getting started
 
 In brief:
 
-* Get an [access](../access/), ask the [staff](../../staff/).
-	* Please change your password.
-* Go to [hades.hevs.ch](http://hades.hevs.ch) and create a VM.
-	* Log in.
-	* Go to Compute > Image, click on the "Public" button.
-	*
-* Access it through [ssh](../ssh/) or via a [graphical user interface](../gui/).
+1) Install our [tools](../tools/).
+2) Ask the [staff](../../staff/) for an access.
+    * It's recommended to change your password.
+3) Go to [hades.hevs.ch](http://hades.hevs.ch) and create a VM.
+    * FIXME : procedure
+    * The web interfaces provides links for ssh and vnc access to your machine, just under the IP address.
+    ![Custom URLs](../../images/doc/custom_url.png)
