@@ -14,3 +14,4 @@ In brief:
 	* FIXME : procedure
 	* The web interfaces provides links for ssh and vnc access to your machine, just under the IP address.
 	![Custom URLs](../../images/doc/custom_url.png)
+	Those links uses [hadesssh://VM_IP](hadesssh://VM_IP) and [hadesvnc://VM_IP](hadesvnc://VM_IP) URL schemes, which can be used in your browser on in your OS.
