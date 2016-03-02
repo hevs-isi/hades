@@ -3,7 +3,7 @@ Version:
 Section: base
 Priority: optional
 Architecture: all
-Depends: vinagre, ssh-client
+Depends: vinagre, ssh-client, exo-utils
 Maintainer: Marc Pignat <marc.pignat@hevs.ch>
 Description: Hades.hevs.ch integration
  Handle hadesssh:// and hadesvnc:// URLs.
