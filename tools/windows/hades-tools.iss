@@ -64,6 +64,7 @@ DestDir: {app}; Source: input\putty.exe;
 DestDir: {app}; Source: input\kitty.ini;
 DestDir: {app}; Source: input\puttygen.exe;
 DestDir: {app}; Source: input\vncviewer.exe;
+DestDir: {app}; Source: input\WinSCP.exe;
 
 [Icons]
 Name: "{group}\Hades web interface"; Filename : "http://hades.hevs.ch/"
@@ -83,4 +84,9 @@ Root: HKCR; Subkey: "hadesssh"; ValueType: "string"; ValueData: "hadesssh Protoc
 Root: HKCR; Subkey: "hadesssh"; ValueType: "string"; ValueName: "URL Protocol"; ValueData: ""
 Root: HKCR; Subkey: "hadesssh\DefaultIcon"; ValueType: "string"; ValueData: "{app}\putty.exe,0"
 Root: HKCR; Subkey: "hadesssh\shell\open\command"; ValueType: "string"; ValueData: """wscript.exe"" ""//NoLogo"" ""{app}\hades_url_handler.vbs"" ""%1"""
+
+Root: HKCR; Subkey: "hadesscp"; ValueType: "string"; ValueData: "hadesssh Protocol"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "hadesscp"; ValueType: "string"; ValueName: "URL Protocol"; ValueData: ""
+Root: HKCR; Subkey: "hadesscp\DefaultIcon"; ValueType: "string"; ValueData: "{app}\putty.exe,0"
+Root: HKCR; Subkey: "hadesscp\shell\open\command"; ValueType: "string"; ValueData: """wscript.exe"" ""//NoLogo"" ""{app}\hades_url_handler.vbs"" ""%1"""
 
