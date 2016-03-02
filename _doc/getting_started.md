@@ -28,6 +28,10 @@ into the [issue tracker](https://github.com/hevs-isi/hades//issues).
 the drop down menu.
 
 
-:point_right: [hadesssh://VM_IP](hadesssh://VM_IP) and [hadesvnc://VM_IP](hadesvnc://VM_IP)
-are handled by our [tools](../tools). They should work in your browser and on your desktop. They can be used to
-create handy shortcuts to your VMs.
+:point_right: [hadesssh://VM_IP](hadesssh://VM_IP) and
+[hadesvnc://VM_IP](hadesvnc://VM_IP) are handled by our [tools](../tools). They
+should work in your browser and on your desktop. They can be used to create
+handy shortcuts to your VMs.
+
+On windows, the [hadesscp://VM_IP](hadesscp://VM_IP) URL scheme is handled by
+our [tools](../tools). See also : [file transfer in detail](../file-transfer).

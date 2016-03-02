@@ -5,15 +5,19 @@ weight: 1
 title: Tools
 ---
 
-The virtual machines lives on their own private IP network, and accessing them requires some tools and configuration.
-Our tools handles two special kind of URLs : `hadesssh://` for ssh and `hadesvnc://` for remote display.
+The virtual machines lives on their own private IP network, and accessing them
+requires some tools and configuration. Our tools handles three special kind of URLs :
+
+* `hadesssh://` for ssh.
+* `hadesvnc://` for remote (VNC) display.
+* `hadesscp://` for remote file transfer (scp).
 
 :point_right: Virtual machines' IP addresses never change! Feel free to save links to your machines in your browser or on your desktop.
 
 
 
 ## For windows.
-* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2016-03-01.exe).
+* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2016-03-02.exe).
 
 * Generate your ssh public key
 	* run `PuttyGen` (a shortcut should be in the start menu)
@@ -35,4 +39,6 @@ It is always possible to use the [manual configuration](../ssh).
 
 Now you can either use the `hadesssh://VM_IP` URL for accessing your VM
 or the `ssh-hades cluster@VM_IP` command line tool.
+The `hadesscp://` protocol is currently not supported on linux, the `scp-hades`
+command should be used instead.
 

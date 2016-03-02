@@ -5,11 +5,9 @@ weight: 20
 title: File transfer
 ---
 
-## From a FTP/HTTP server
-Virtual machines have access to the internet and files can be transfered directy, for intsance getting the hades logo using `wget`:
-{% highlight shell %}
-wget http://hevs-isi.github.io/hades/images/logo1.png
-{% endhighlight %}
+## From your windows machine
+* Using our [tools](../tools), since version 2016-03-02, `hadesscp://` URLs can
+be used to copy files using WinSCP.
 
 ## From/to your Linux machine
 
@@ -28,6 +26,12 @@ scp -o 'ProxyCommand ssh sshfwd@hades.hevs.ch -W %h:%p' localfile cluster@VM_IP:
 scp vmfile localuser@YOUR_IP:
 {% endhighlight %}
 
+
+## From a FTP/HTTP server
+Virtual machines have access to the internet and files can be transfered directy, for intsance getting the hades logo using `wget`:
+{% highlight shell %}
+wget http://hevs-isi.github.io/hades/images/logo1.png
+{% endhighlight %}
 
 ## From/to the HEI network
 HEI network drives are available from the VMs, and here is how to mount them.
