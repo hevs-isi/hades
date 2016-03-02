@@ -9,14 +9,14 @@ So this method can't be supported, and will probably be disabled in the future.
 
 This page is about an **alternate** and manual configuration for accessing the Virtual machines. Please have a look at our [pacakged tools](../tools) before continuing.
 
-# VNC versus X11 forwarding
+## VNC versus X11 forwarding
 
 |               | VNC           | X11 forwarding |
 | ------------- | ------------- | -------------  |
 | Display       | Full remote desktop  | Single application   |
 | OpenGL        | -                    | possible |
 
-# VNC
+## VNC
 
 First of all you need a working [ssh connection](../ssh/)
 
@@ -31,7 +31,7 @@ The required software is already installed and configured in recent images (star
 2. Open the display with your favorite client : `vinagre localhost:11234`
 :bulb: `VM_IP_ADDRESS` can be found on the web interface : > Compute > Instance , in the "IP Address" column
 
-# X11 Forwarding
+## X11 Forwarding
 
 First of all you need a working [ssh connection](../ssh/)
 

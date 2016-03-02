@@ -14,6 +14,7 @@ Our tools handles two special kind of URLs : `hadesssh://` for ssh and `hadesvnc
 
 ## For windows.
 * Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2016-03-01.exe).
+
 * Generate your ssh public key
 	* run `PuttyGen` (a shortcut should be in the start menu)
 		* Click generate and move the mouse as requested
@@ -21,13 +22,17 @@ Our tools handles two special kind of URLs : `hadesssh://` for ssh and `hadesvnc
 		* Copy the public key from the top text field and email it to hades at hevs dot ch
 
 ## For Linux
-We provide an installer for debian-likes, tested on ubuntu 15.10 on xfce.
+We provide an installer for debian-likes.
 It is always possible to use the [manual configuration](../ssh).
-* Install the [tools](http://hades.hevs.ch/hades-tools-2016-02-29.deb).
+
+* Install the [tools](http://hades.hevs.ch/hades-tools-2016-03-02.deb).
 * Generate your ssh public key (only if you don't have one)
 	* `file ~/.ssh/id_rsa.pub`
 		* If the file exists, skip the creation.
 	* ssh-keygen -t rsa
 		* save the key as `~/.ssh/id_rsa`
 	* email `~/.ssh/id_rsa.pub` to hades at hevs dot ch
+
+Now you can either use the `hadesssh://VM_IP` URL for accessing your VM
+or the `ssh-hades cluster@VM_IP` command line tool.
 

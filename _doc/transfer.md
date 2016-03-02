@@ -1,26 +1,51 @@
 ---
 layout: page
-permalink: doc/network-drives/
+permalink: doc/file-transfer/
 weight: 20
-title: Network drives
+title: File transfer
 ---
 
+## From a FTP/HTTP server
+Virtual machines have access to the internet and files can be transfered directy, for intsance getting the hades logo using `wget`:
+{% highlight shell %}
+wget http://hevs-isi.github.io/hades/images/logo1.png
+{% endhighlight %}
+
+## From/to your Linux machine
+
+### From your linux machine
+* Using our [tools](../tools)
+{% highlight shell %}
+scp-hades local_file cluster@VM_IP:
+{% endhighlight %}
+* Using the standard `scp`
+{% highlight shell %}
+scp -o 'ProxyCommand ssh sshfwd@hades.hevs.ch -W %h:%p' localfile cluster@VM_IP:
+{% endhighlight %}
+
+### To your linux machine
+{% highlight shell %}
+scp vmfile localuser@YOUR_IP:
+{% endhighlight %}
+
+
+## From/to the HEI network
 HEI network drives are available from the VMs, and here is how to mount them.
 
-# Required software
+### Required software
 The required software is already installed in recent images (starting with 2015.02), for older images, the `cifs-utils` package must be installed.
 {% highlight shell %}
 sudo apt-get install cifs-utils
 {% endhighlight %}
 
-# List of drives
+### List of drives
 The sinf provides a list of [available drives](https://sinf.hevs.ch/fr-fr/Ressources/R%C3%A9seau/Lecteurs-r%C3%A9seau).
-Another way to obtain this this list is by using the `ǹet use` command on a windows machine with the drives already connected.
+Another way to obtain this this list is by using the `net use` command on a windows machine with the drives already connected.
 
-### Example
+#### Example
 On my windows machine:
 
-```
+{% highlight plaintext %}
 C:\Users\uadmin>net use
 New connections will be remembered.
 
@@ -41,11 +66,14 @@ The command completed successfully.
 
 
 C:\Users\uadmin>
-```
+
+{% endhighlight %}
+
+
 So the `I:` drive is on the server `VLEDATA` in the share `HEI`, It's complete URL is therefore : `smb://VLEDATA/HEI`
 
 
-# Mounting from the GUI
+### Mounting from the GUI
 1. Open the file manager (`thunar`)
 2. Type `smb://SERVER/SHARE` into the address bar
 3. Provide your credentials
@@ -55,15 +83,17 @@ So the `I:` drive is on the server `VLEDATA` in the share `HEI`, It's complete U
 
 ![thunar credentials](../../images/doc/thunar_network_drive.png)
 
-# Mounting from command line
+### Mounting from command line
 Example : Mounting `I:\` in `./toto`
 
-	mkdir -p toto
-	sudo mount -t cifs -o username=username_goes_here //datahei.hevs.ch/hei toto
+{% highlight shell %}
+mkdir -p toto
+sudo mount -t cifs -o username=username_goes_here //datahei.hevs.ch/hei toto
+{% endhighlight %}
 
 :exclamation: Don't include `smb:` in the server path
 
-# Permanent mount
+### Permanent mount
 Example : mount `I:\` in `/mnt/i`
 
 1. Create the mount destination
