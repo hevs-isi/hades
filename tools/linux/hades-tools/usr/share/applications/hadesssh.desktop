@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Hades ssh
+Comment=Access VM ssh on hades
+Exec=exo-open --launch TerminalEmulator _hadesssh_url.sh %u
+Type=Application
+Terminal=false
+MimeType=x-scheme-handler/hadesssh
+StartupNotify=true
+Categories=GNOME;GTK;Network;RemoteAccess;
+Icon=xfce4-terminal

@@ -7,7 +7,7 @@ URLs.
 * Add the following files to input/
 	* pageant.exe
 	* plink.exe
-	* kitty.exe renamed to putty.exe
+	* kitty.exe renamed to putty.exe (not kitty_portable.exe, it tries to write wherever it is)
 	* puttygen.exe
 	* vncviewer.exe
 * Compile hades-tools.iss

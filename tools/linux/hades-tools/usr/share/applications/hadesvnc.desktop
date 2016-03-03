@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Hades vnc
+Comment=Access VM vnc on hades
+Exec=exo-open --launch TerminalEmulator _hadesvnc_url.sh %u
+Type=Application
+Terminal=false
+MimeType=x-scheme-handler/hadesvnc
+StartupNotify=true
+Categories=GNOME;GTK;Network;RemoteAccess;
+Icon=vinagre

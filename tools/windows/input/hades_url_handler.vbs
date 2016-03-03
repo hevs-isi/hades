@@ -40,7 +40,7 @@ model_ktx = "PortKnocking\\" & VbCrLf & _
 "rzCommand\\" & VbCrLf & _
 "CygtermCommand\\" & VbCrLf & _
 "Cygterm64\0\" & VbCrLf & _
-"CygtermAutoPath\1\" & VbCrLf & _
+"CygtermAutoPath\0\" & VbCrLf & _
 "CygtermAltMetabit\0\" & VbCrLf & _
 "HyperlinkRegularExpression\(((https%3F%7Cftp)%3A%5C%2F%5C%2F)%7Cwww%5C.)(([0-9]+%5C.[0-9]+%5C.[0-9]+%5C.[0-9]+)%7Clocalhost%7C([a-zA-Z0-9%5C-]+%5C.)%2A[a-zA-Z0-9%5C-]+%5C.(com%7Cnet%7Corg%7Cinfo%7Cbiz%7Cgov%7Cname%7Cedu%7C[a-zA-Z][a-zA-Z]))(%3A[0-9]+)%3F((%5C%2F%7C%5C%3F)[^%20%22]%2A[^%20,;%5C.%3A%22%3E)])%3F\" & VbCrLf & _
 "HyperlinkRegularExpressionUseDefault\1\" & VbCrLf & _
@@ -260,12 +260,12 @@ model_ktx = "PortKnocking\\" & VbCrLf & _
 "GssapiFwd\0\" & VbCrLf & _
 "AgentFwd\1\" & VbCrLf & _
 "TryAgent\1\" & VbCrLf & _
-"Compression\0\" & VbCrLf & _
+"Compression\1\" & VbCrLf & _
 "NoPTY\0\" & VbCrLf & _
-"LocalUserName\\" & VbCrLf & _
+"LocalUserName\cluster\" & VbCrLf & _
 "UserNameFromEnvironment\0\" & VbCrLf & _
 "Environment\\" & VbCrLf & _
-"ProxyTelnetCommand\plink%20sshfwd@%25proxyhost%20-nc%20%25host%3A%25port\" & VbCrLf & _
+"ProxyTelnetCommand\plink%20sshfwd@%25proxyhost%20-nc%20%25host%3A%25port%20-hostkey%20c1%3Ae5%3Ac9%3A16%3A93%3A60%3A8d%3A13%3Adc%3A1f%3A70%3A74%3Afb%3A8a%3Aa5%3Aea%20-batch\" & VbCrLf & _
 "ProxyPassword\\" & VbCrLf & _
 "ProxyUsername\\" & VbCrLf & _
 "ProxyPort\22\" & VbCrLf & _
@@ -336,6 +336,7 @@ scriptPahth = Wscript.ScriptFullName
 Set filesys = CreateObject("Scripting.FileSystemObject")
 Set objFile = filesys.GetFile(scriptPahth)
 scriptDir = filesys.GetParentFolderName(objFile)
+objShell.CurrentDirectory = scriptDir
 
 if debug then
 	Wscript.echo scriptDir
@@ -382,7 +383,7 @@ if debug then
 	Wscript.echo keyfile
 end if
 
-objShell.Run """"+scriptDir + "\" + "pageant.exe"" """+keyfile+"", 1, True
+objShell.Run """"+scriptDir + "\" + "pageant.exe"" """+keyfile+"", 1, False
 if Not filesys.FileExists(keyfile) then
 	Wscript.echo "keyfile '" + keyfile + "' not found"
 	WScript.quit 1
