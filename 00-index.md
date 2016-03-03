@@ -4,4 +4,6 @@ permalink: "index.html"
 title: Welcome
 ---
 
-Here is the new home for the `hades` cluster documentaion.
+Here is the new home for the `hades` cluster documentation.
+
+![](images/hades.jpg)
