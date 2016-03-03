@@ -31,29 +31,22 @@ The required software is already installed and configured in recent images (star
 2. Open the display with your favorite client : `vinagre localhost:11234`
 :bulb: `VM_IP_ADDRESS` can be found on the web interface : > Compute > Instance , in the "IP Address" column
 
-## X11 Forwarding
+## X11 forwarding for Windows
+1. Install our [tools](../tools)
+2. Install [VcXsrv](https://sourceforge.net/projects/vcxsrv/files/latest/download?source=files)
+3. Run VcXSrv
+4. Conntect to your machine using the `hadesssh://` link.
+5. Test using `xclock`
 
-First of all you need a working [ssh connection](../ssh/)
+![xclock](../../images/doc/xclock.png).
 
-### On your machine
-`ssh-hades cluster@VM_IP_ADDRESS -X`, then you can start the application from the ssh shell and it will be
+## X11 Forwarding for Linux
+
+Install our [tools](../tools), then `ssh-hades cluster@VM_IP_ADDRESS -X`.
+Applications started from this ssh shell will be run remotely and will be
 displayed locally.
 
 If you don't need the remote shell : `ssh-hades cluster@VM_IP_ADDRESS -X command`
+
 :bulb: `VM_IP_ADDRESS` can be found on the web interface : > Compute > Instance , in the "IP Address" column
-
-# Step-by-step setup for windows <a name="windows"></a>
-* Download and install cygwin (preferably 64 bit if your platform is compatible)
-	* Install (at least) the following packages:
-		* ssh
-		* xinit
-	* Add this line `db_home: windows` at the end of `c:\cygwin\etc\nsswitch.conf`
-	* Run a cygwin shell and type `pwd`, the expected output is `/cygdrive/c/users/USERNAME`. If the output is `/cygdrive/c/SPB_DATA`,
-	you MUST remove the HOME environment variable.
-		* Open Control Panel > search for environment variables > edit > remove HOME
-	* Add this line `alias ssh-hades="ssh -o \"ProxyCommand ssh sshfwd@hades.hevs.ch -W %h:%p\""` at the end of `c:\cygwin\etc\profile`
-	* Add this line `export DISPLAY=:0.0` at the end of `c:\cygwin\etc\profile`
-	* Download [vncviewer64.exe](http://tigervnc.bphinz.com/nightly/viewers/vncviewer64.exe) into `c:\cygwin\bin`
-
-	* Setup [ssh connection](../ssh/).
 

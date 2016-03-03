@@ -17,7 +17,7 @@ requires some tools and configuration. Our tools handles three special kind of U
 
 
 ## For windows.
-* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2016-03-02.exe).
+* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2016-03-03.exe).
 
 * Generate your ssh public key
 	* run `PuttyGen` (a shortcut should be in the start menu)
