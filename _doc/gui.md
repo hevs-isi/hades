@@ -38,7 +38,7 @@ The required software is already installed and configured in recent images (star
 4. Conntect to your machine using the `hadesssh://` link.
 5. Test using `xclock`
 
-![xclock](../../images/doc/xclock.png).
+![xclock](../../images/doc/xclock.png)
 
 ## X11 Forwarding for Linux
 
