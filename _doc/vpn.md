@@ -20,7 +20,20 @@ For windows or OS X users, the documentation for connecting to the VPN is on the
 ## Linux
 
 * Install the required software.
-`sudo apt-get install openconnect`
+	* On ubuntu 15.10 : `sudo apt-get install openconnect`
+	* On ubuntu 14.04.4 LTS:
+{% highlight shell %}
+sudo apt-get install build-essential git vpnc vpnc-scripts automake libtool libssl-dev libxml2-dev
+mkdir git
+cd git
+git clone git://git.infradead.org/users/dwmw2/openconnect.git
+cd openconnect
+./autogen.sh
+./configure --with-vpnc-script=/usr/share/vpnc-scripts/vpnc-script
+make
+sudo make install
+sudo ldconfig
+{% endhighlight %}
 * Connect the VPN using your AAI login.
 `sudo openconnect --juniper remote.hevs.ch`
 * When the connection is established, run the following command to fix routes:
