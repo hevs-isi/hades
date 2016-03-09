@@ -3,6 +3,7 @@ Version:
 Section: base
 Priority: optional
 Architecture: all
+Installed-Size: 40
 Depends: vinagre, ssh-client, exo-utils
 Maintainer: Marc Pignat <marc.pignat@hevs.ch>
 Description: Hades.hevs.ch integration
