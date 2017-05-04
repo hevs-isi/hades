@@ -87,6 +87,8 @@ So the `I:` drive is on the server `VLEDATA` in the share `HEI`, It's complete U
 
 ![thunar credentials](../../images/doc/thunar_network_drive.png)
 
+:exclamation: If thunar as your password repeatedly, `security=user` and `client use spnego = no` must be added to the `[global]` section of `/etc/samba/smb.conf`.
+
 ### Mounting from command line
 Example : Mounting `I:\` in `./toto`
 
