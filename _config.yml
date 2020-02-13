@@ -21,7 +21,7 @@ collections:
         permalink: doc/:path/
 
 # Setup
-title:            Hades
+title:          Hades
 tagline:        'Hades cluster'
 description:    'Documentation for the hades cluster'
 url:            https://hevs-isi.github.io/hades/
