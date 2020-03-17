@@ -50,7 +50,7 @@ Example : Mounting `I:\` in `./toto`
 
 {% highlight shell %}
 mkdir -p toto
-sudo mount -t cifs -o vers=2.0,username=username_goes_here ////datahei-i.hevs.ch/hei toto
+sudo mount -t cifs -o vers=2.0,username=username_goes_here //datahei-i.hevs.ch/hei toto
 {% endhighlight %}
 
 :exclamation: Don't include `smb:` in the server path
