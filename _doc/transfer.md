@@ -62,6 +62,8 @@ sudo umount toto
 
 ### Permanent mount (not recommended)
 This method is not recommended, since **deleting the mount point could delete the whole mounted drive**.
+
+
 Example : mount `I:\` in `/mnt/i`
 
 1. Create the mount destination
