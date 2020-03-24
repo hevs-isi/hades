@@ -50,7 +50,7 @@ Example : Mounting `I:\` in `./toto`
 
 {% highlight shell %}
 mkdir -p toto
-sudo mount -t cifs -o vers=2.0,username=username_goes_here //datahei-i.hevs.ch/hei toto
+sudo mount -t cifs -o vers=2.0,iocharset=utf8,uid=$(id -u),gid=$(id -g),username=username_goes_here //datahei-i.hevs.ch/hei toto
 {% endhighlight %}
 
 :exclamation: Don't include `smb:` in the server path
@@ -70,6 +70,6 @@ mkdir /mnt/i
 
 2. Add this line to `/etc/fstab`:
 ```
-	//datahei.hevs.ch/hei  /mnt/i  cifs  username=username_goes_here,password=*****,iocharset=utf8  0  0
+	//datahei.hevs.ch/hei  /mnt/i  cifs  vers=2.0,iocharset=utf8,uid=1000,gid=1000,username=username_goes_here,password=*****  0  0
 ```
 :exclamation: Don't include `smb:` in the server path
