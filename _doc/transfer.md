@@ -55,12 +55,13 @@ sudo mount -t cifs -o vers=2.0,iocharset=utf8,uid=$(id -u),gid=$(id -g),username
 
 :exclamation: Don't include `smb:` in the server path
 
-Then unmount when you're done.
+Then unmount when you're done (since **deleting the mount point could delete the whole mounted drive**).
 {% highlight shell %}
 sudo umount toto
 {% endhighlight %}
 
 ### Permanent mount (not recommended)
+This method is not recommended, since **deleting the mount point could delete the whole mounted drive**.
 Example : mount `I:\` in `/mnt/i`
 
 1. Create the mount destination
