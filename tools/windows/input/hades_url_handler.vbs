@@ -107,7 +107,7 @@ model_ktx = "PortKnocking\\" & VbCrLf & _
 "LocalPortAcceptAll\0\" & VbCrLf & _
 "X11AuthFile\\" & VbCrLf & _
 "X11AuthType\1\" & VbCrLf & _
-"X11Display\\" & VbCrLf & _
+"X11Display\localhost%3A0\" & VbCrLf & _
 "X11Forward\1\" & VbCrLf & _
 "BlinkText\0\" & VbCrLf & _
 "BCE\1\" & VbCrLf & _
@@ -265,11 +265,11 @@ model_ktx = "PortKnocking\\" & VbCrLf & _
 "LocalUserName\cluster\" & VbCrLf & _
 "UserNameFromEnvironment\0\" & VbCrLf & _
 "Environment\\" & VbCrLf & _
-"ProxyTelnetCommand\plink%20sshfwd@%25proxyhost%20-nc%20%25host%3A%25port%20-hostkey%20c1%3Ae5%3Ac9%3A16%3A93%3A60%3A8d%3A13%3Adc%3A1f%3A70%3A74%3Afb%3A8a%3Aa5%3Aea%20-batch\" & VbCrLf & _
+"ProxyTelnetCommand\plink%20sshfwd@%25proxyhost%20-nc%20%25host%3A%25port%20-hostkey%20c1%3Ae5%3Ac9%3A16%3A93%3A60%3A8d%3A13%3Adc%3A1f%3A70%3A74%3Afb%3A8a%3Aa5%3Aea%20%20-agent%20-X\" & VbCrLf & _
 "ProxyPassword\\" & VbCrLf & _
 "ProxyUsername\\" & VbCrLf & _
 "ProxyPort\22\" & VbCrLf & _
-"ProxyHost\hades.hevs.ch\" & VbCrLf & _
+"ProxyHost\153.109.6.61\" & VbCrLf & _
 "ProxyMethod\5\" & VbCrLf & _
 "ProxyLocalhost\0\" & VbCrLf & _
 "ProxyDNS\1\" & VbCrLf & _
@@ -390,13 +390,15 @@ if Not filesys.FileExists(keyfile) then
 end if
 
 ' Now run
-if protocol = "hadesvnc" then
+Select case protocol
+case "hadesvnc"
 	objShell.Run """"+scriptDir + "\" + "putty.exe"" -N -nofiles -kload "+tempfolder+"\"+tempname, 1, False
 	WScript.Sleep 1000
 	objShell.Run """"+scriptDir + "\" + "vncviewer.exe"" localhost:"+port, 1, False
-else
+case "hadesssh"
 	objShell.Run """"+scriptDir + "\" + "putty.exe"" -nofiles -kload "+tempfolder+"\"+tempname, 1, False
-end if
+case "hadesscp"
+	objShell.Run """"+scriptDir + "\" + "WinSCP.exe"" sftp://"+user+"@"+ip+" /rawsettings AgentFwd=1 Tunnel=1 TunnelHostName=hades.hevs.ch TunnelUserName=sshfwd ProxyMethod=0 AddressFamily=1 SshSimple=1", 1, False
+end Select
 
 Set objShell = Nothing
-
