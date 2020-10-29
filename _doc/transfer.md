@@ -26,6 +26,17 @@ scp -o 'ProxyCommand ssh sshfwd@hades.hevs.ch -W %h:%p' localfile cluster@VM_IP:
 scp vmfile localuser@YOUR_IP:
 {% endhighlight %}
 
+## Using `rsync`
+`rsync` can be used to transfer files both ways:
+### From the VM
+{% highlight shell %}
+rsync -azv -e 'ssh -A -J sshfwd@hades.hevs.ch' cluster@VM_IP:file_on_the_vm local_file
+{% endhighlight %}
+
+### To the VM
+{% highlight shell %}
+rsync -azv -e 'ssh -A -J sshfwd@hades.hevs.ch' local_file cluster@VM_IP:file_on_the_vm
+{% endhighlight %}
 
 ## From a FTP/HTTP server
 Virtual machines have access to the internet and files can be transfered directy, for intsance getting the hades logo using `wget`:
