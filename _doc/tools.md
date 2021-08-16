@@ -18,6 +18,10 @@ requires some tools and configuration. Our tools handles three special kind of U
 
 ## For windows.
 * Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2020-06-23.exe).
+  * This installer contains all the tools needed to access a VM running on hades:
+    * Some tools for ssh (putty, pageant, plink, puttygen)
+    * A scp client (winscp)
+    * A VNC client (vncviewer)
 
 * Generate your ssh public key
 	* run `PuttyGen` (a shortcut should be in the start menu)
