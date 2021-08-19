@@ -65,6 +65,7 @@ sudo mount -t cifs -o vers=2.0,iocharset=utf8,uid=$(id -u),gid=$(id -g),username
 {% endhighlight %}
 
 :exclamation: Don't include `smb:` in the server path
+
 :exclamation: `vers=2.0` must be replaced by `vers=3` on some newer servers.
 
 Then unmount when you're done (since **deleting the mount point could delete the whole mounted drive**).
@@ -88,4 +89,5 @@ mkdir /mnt/i
 	//datahei.hevs.ch/hei  /mnt/i  cifs  vers=2.0,iocharset=utf8,uid=1000,gid=1000,username=username_goes_here,password=*****  0  0
 ```
 :exclamation: Don't include `smb:` in the server path
+
 :exclamation: `vers=2.0` must be replaced by `vers=3` on some newer servers.
