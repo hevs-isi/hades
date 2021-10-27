@@ -392,7 +392,7 @@ end if
 ' Now run
 Select case protocol
 case "hadesvnc"
-	objShell.Run """"+scriptDir + "\" + "putty.exe"" -N -nofiles -kload "+tempfolder+"\"+tempname, 1, False
+	objShell.Run """"+scriptDir + "\" + "plink.exe"" -batch -agent -hostkey c1:e5:c9:16:93:60:8d:13:dc:1f:70:74:fb:8a:a5:ea -N -L "+port+":"+ip+":5900 sshfwd@hades.hevs.ch", 1, False
 	WScript.Sleep 1000
 	objShell.Run """"+scriptDir + "\" + "vncviewer.exe"" localhost:"+port, 1, False
 case "hadesssh"
