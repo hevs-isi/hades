@@ -17,7 +17,7 @@ requires some tools and configuration. Our tools handles three special kind of U
 
 
 ## For windows.
-* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2020-01-07.exe).
+* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2021-10-27.exe).
 
 * Generate your ssh public key
 	* run `PuttyGen` (a shortcut should be in the start menu)
@@ -29,7 +29,7 @@ requires some tools and configuration. Our tools handles three special kind of U
 We provide an installer for debian-likes.
 It is always possible to use the [manual configuration](../ssh).
 
-* Install the [tools](http://hades.hevs.ch/hades-tools-2016-03-02.deb).
+* Install the [tools](http://hades.hevs.ch/hades-tools-2021-10-27.deb).
 * Generate your ssh public key (only if you don't have one)
 	* `file ~/.ssh/id_rsa.pub`
 		* If the file exists, skip the creation.
