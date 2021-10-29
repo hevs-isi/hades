@@ -1,4 +1,4 @@
-![Logo](https://rawgit.com/hevs-isi/hades/master/images/logo1.png)
+![Logo](https://raw.githubusercontent.com/hevs-isi/hades/master/images/logo1.png)
 
 This is the https://www.hevs.ch/isi system engineering cluster Open-Stack based toolbox. 
 
