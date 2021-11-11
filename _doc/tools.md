@@ -17,7 +17,7 @@ requires some tools and configuration. Our tools handles three special kind of U
 
 
 ## For windows.
-* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2021-10-27.exe).
+* Install the [tools for windows](http://hades.hevs.ch/hades-tools-windows-2021-11-10.exe).
   * This installer contains all the tools needed to access a VM running on hades:
     * Some tools for ssh (putty, pageant, plink, puttygen)
     * A scp client (winscp)
